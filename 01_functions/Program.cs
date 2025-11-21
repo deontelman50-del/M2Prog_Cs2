@@ -11,6 +11,7 @@
         Program.vraag3();
         Program.vraag4();
         Program.vraag5();
+        Program.vraag6();
         
     } // het is een function. het return type function is
 
@@ -53,9 +54,11 @@
 
         Console.WriteLine(antwoord5);
     }
+        internal void vraag6()
+    {
+        Console.WriteLine("Has someone caught you dancing in front of the mirror?");
+        string antwoord6 = Console.ReadLine();
 
-
-    
-
-    
+        Console.WriteLine(antwoord6);
+    }
 }
