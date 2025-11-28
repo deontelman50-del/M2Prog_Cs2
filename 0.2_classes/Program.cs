@@ -1,4 +1,4 @@
-﻿namespace _02_classes;
+﻿namespace _0._2_classes;
 
 class Program
 {
