@@ -2,6 +2,20 @@
 
     internal class Program
 {
+    string[] vragen = new string[]
+    {
+        "What 1997 N64 video game, features James Bond and is named after the 1995 film?",
+        "Which spooky 2001 GameCube game starring Mario’s brother got a reboot for Nintendo Switch in 2019?",
+        "What is thought to be the first video game, created in 1958 and becoming popular in the 1970s?",
+        "Making his debut in 1990's Super Mario World, what is the name of the enemy-eating, egg-throwing green dinosaur who serves as a sidekick to Mario and Luigi in the Mario franchise?"
+
+    };
+    internal string GetVraag(int vraagIndex)
+    {
+        return vragen[vraagIndex];
+    }
+
+
     static void Main(string[] args)
     {
         Program Program = new Program();
@@ -12,6 +26,7 @@
         Program.vraag4();
         Program.vraag5();
         Program.vraag6();
+        Program.vraag7();
         
     } // het is een function. het return type function is
 
@@ -61,4 +76,13 @@
 
         Console.WriteLine(antwoord6);
     }
+        internal string vraag7()
+    {
+        Console.WriteLine("");
+        string antwoord7 = Console.ReadLine();
+
+        return antwoord7;
+        
+    }
+    
 }
