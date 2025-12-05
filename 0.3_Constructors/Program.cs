@@ -9,5 +9,6 @@ class Program
 
 private void run() {
     QuizVraag vraag = new QuizVraag("hier komt de vraag","hier komt het antwoord");
+    Quiz quiz = new Quiz(10);
 }
 }
