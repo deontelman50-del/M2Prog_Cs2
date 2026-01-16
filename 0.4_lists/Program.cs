@@ -1,33 +1,47 @@
-﻿namespace _0._4_lists;
+﻿﻿using System.Reflection;
+using System.Runtime.Serialization.Formatters;
+
+namespace _04_lists;
 
 class Program
 {
+    double[] prijzen = new double[] { 0.99, 5.60, 10.11, 2.50 };
+    string[] artiekelen = new string[] { "snoepje", "luxe broodjes", "lunch menu", "koekjes" };
+    Formulier[] formulieren = new Formulier[2];
+
+    internal class Formulier
+    {
+        internal int Sterren { get; set; }
+        internal string Feedback { get; set; }
+    }
+
     static void Main(string[] args)
     {
         Console.WriteLine("Hello, World!");
+        Program program = new Program();
+        program.Run();    
     }
-    internal void Run ()
-    {
-        double[] prijzen = new double[] { 0.99, 5.60, 10.11 };
-        string[] artiekelen = { "snoepje", "luxe broodje", "lunch menu"};
-        Formulier[] formulieren = new Formulier[2];
-        formulieren[0] = new Formulier()
-    {
-        Feedback = "prijzig maar lekker",
-        Sterren = 5,
-        Prijzen = 10.11
-    };
-        formulieren[1] = new Formulier()
+    internal void Run()
+    {   
+        p.formulieren[0] = new Formulier()
         {
-            Feedback = "lekker en goedkoop",
-            Sterren = 4,
-            Prijzen = 0.99
+            Feedback = "prijzen maar lekker",
+            Sterren = 5
         };
-        for (int i= 0; i  < prijzen.Length; i++)
+        p.formulieren[1] = new Formulier()
         {
-            Console.WriteLine(prijzen[i]);
+            Feedback = "eten viel tegen",
+            Sterren = 2
+        };
+        for (int i = 0; i < p.prijzen.Length; i++)
+        {
+            Console.WriteLine(p.artiekelen[i]);
+            Console.WriteLine(p.prijzen[i]);
+        }
+        foreach (Formulier formulier in p.formulieren)
+        {
+            Console.WriteLine($"{formulier.Feedback}");
+            Console.WriteLine($"{formulier.Sterren}");
         }
     }
-
-
-}
+}  
