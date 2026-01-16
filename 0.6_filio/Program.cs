@@ -1,4 +1,5 @@
 ﻿using System.Data;
+using System.Diagnostics;
 
 namespace _0._6_filio;
 
@@ -13,5 +14,7 @@ class Program
     }
     void Run()
     {
+        Console.WriteLine(Environment.CurrentDirectory);
+        string[] lines = File.ReadAllLines("quiz.txt");
     }
 }
